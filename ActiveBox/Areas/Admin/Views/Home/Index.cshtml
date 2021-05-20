@@ -1,0 +1,61 @@
+@using Microsoft.EntityFrameworkCore
+@model ActiveBox.Areas.Admin.Models.Entities
+
+<div style="padding-top: 100px;">
+@foreach (var item in Model.Entites)
+{
+    <div>
+        
+        <p>@item.Header </p>
+        <p>@item.Text </p>
+        <p>@item.TypeId </p>
+        <a asp-area="Admin" asp-controller="EntityBase" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+        <hr>
+    </div>
+}
+</div>
+
+@foreach (var item in Model.Links.Include(x=> x.EntityBases))
+{
+    
+    <p>@item.Links </p>
+    <p>@item.Name </p>
+    <p>@item.EntityBases.Header </p>
+    <a asp-area="Admin" asp-controller="Links" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+    <hr>
+}
+
+
+@foreach (var item in Model.Teams)
+{
+    <p>@item.Header </p>
+    <p>@item.Text </p>
+    <p>@item.Position </p>
+    <p>@item.TypeId </p>
+    <a asp-area="Admin" asp-controller="Teams" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+    <hr>
+}
+
+@foreach (var item in Model.Types)
+{
+    <p>@item.Id </p>
+    <p>@item.NameOfType </p>
+    <a asp-area="Admin" asp-controller="Types" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+    <hr>
+}
+
+<style>
+    /**{*/
+    /*background-color: #3a3e64;*/
+    /*color: #fff;*/
+    /*}*/
+    /*body{*/
+    /*background-color: #3a3e64;*/
+    /*}*/
+    body{
+     color: black;
+    }
+    .nav__link{
+    color: black;
+    }
+</style>

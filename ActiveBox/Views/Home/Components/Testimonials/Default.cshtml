@@ -1,0 +1,54 @@
+﻿@model IQueryable<EntityBase>
+
+@{ int i = 0;}
+
+
+
+<!-- Testimonials -->
+<div class="reviews" id="reviews">
+    <div class="container">
+         <div class="reviews__slider" id="reviewsSlider">
+        @foreach (var item in Model)
+        {
+            string s = $"img/reviews/review-{++i}.jpg";
+            <div class="slick-item">
+                <div class="reviews__item">
+                    <div class="reviews__photo">
+                        <img class="reviews__img" src="@s" alt="">
+                    </div>
+                    <div class="reviews__content">
+                        <div class="reviews__text">“@item.Text”</div>
+                        <div class="reviews__author">@item.Header</div>
+                    </div>
+                </div>
+            </div>
+        }
+         </div>
+    </div><!-- /.container -->
+</div><!-- /.reviews -->
+
+    
+            @* <div class="slick-item"> *@
+            @*     <div class="reviews__item"> *@
+            @*         <div class="reviews__photo"> *@
+            @*             <img class="reviews__img" src="img/reviews/review-1.jpg" alt=""> *@
+            @*         </div> *@
+            @*         <div class="reviews__content"> *@
+            @*             <div class="reviews__text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</div> *@
+            @*             <div class="reviews__author">Susan Sims, Interaction Designer at XYZ</div> *@
+            @*         </div> *@
+            @*     </div> *@
+            @* </div> *@
+            @* *@
+            @* <div class="slick-item"> *@
+            @*     <div class="reviews__item"> *@
+            @*         <div class="reviews__photo"> *@
+            @*             <img class="reviews__img" src="img/reviews/review-1.jpg" alt=""> *@
+            @*         </div> *@
+            @*         <div class="reviews__content"> *@
+            @*             <div class="reviews__text">“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat iure sed placeat laborum, labore explicabo impedit qui! Laudantium, unde voluptates sit animi tenetur veniam dolorem corrupti magnam, ipsum ab, recusandae!”</div> *@
+            @*             <div class="reviews__author">Susan Sims, Interaction Designer at XYZ</div> *@
+            @*         </div> *@
+            @*     </div> *@
+            @* </div> *@
+            @* *@

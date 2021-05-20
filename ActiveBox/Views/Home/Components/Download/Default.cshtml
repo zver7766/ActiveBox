@@ -1,0 +1,12 @@
+﻿@model Task<OurTeam>
+
+<!-- Download -->
+<div class="download" id="download">
+    <div class="container">
+        <h3 class="download__title">@Model.Result.Header</h3>
+        <div class="download__text">
+            <p>@Model.Result.Text</p>
+        </div>
+        <a class="btn  btn--red  btn--long" href="#">@Model.Result.Position</a>
+    </div>
+</div>

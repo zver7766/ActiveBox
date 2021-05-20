@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+@await Component.InvokeAsync("Intro")
+@await Component.InvokeAsync("Features")
+@await Component.InvokeAsync("Works")
+@await Component.InvokeAsync("Team")
+@await Component.InvokeAsync("Testimonials")
+@await Component.InvokeAsync("Download")
+
+@* @{ *@
+@*      await Html.RenderPartialAsync("Works"); *@
+@*     await Html.RenderPartialAsync("Team"); *@
+@*     await Html.RenderPartialAsync("Testimonials"); *@
+@*     await Html.RenderPartialAsync("Download"); *@
+@* }  *@
+
+ 

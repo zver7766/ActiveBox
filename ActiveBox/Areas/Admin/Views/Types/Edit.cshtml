@@ -1,0 +1,18 @@
+﻿@model Task<ActiveBox.Domain.Entities.Type>
+<div>
+    <div>
+        <form asp-area="Admin" asp-controller="Links" asp-action="Edit" method="post">
+            <input type="hidden" asp-for="Result.Id" >
+            <input type="hidden" asp-for="Result.NameOfType" >
+            
+            <div asp-validation-summary="All"></div>
+            <div class="div-box">
+                <label asp-for="Result.NameOfType"></label>
+                <input asp-for="Result.NameOfType">
+                <span asp-validation-for="Result.NameOfType"></span>
+            </div>
+            
+            <input type="submit" value="Save" />
+        </form>
+    </div>
+</div>

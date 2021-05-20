@@ -1,0 +1,29 @@
+@model Task<ActiveBox.Domain.Entities.EntityBase>
+
+<div>
+    <div>
+        <form asp-area="Admin" asp-controller="EntityBase" asp-action="Edit" method="post">
+            <input type="hidden" asp-for="Result.Header" >
+            <input type="hidden" asp-for="Result.Text" >
+            <input type="hidden" asp-for="Result.TypeId" >
+            
+            <div asp-validation-summary="All"></div>
+            <div class="div-box">
+                <label asp-for="Result.Header"></label>
+                <input asp-for="Result.Header">
+                <span asp-validation-for="Result.Header"></span>
+            </div>
+            <div class="div-box">
+                <label asp-for="Result.Text"></label>
+                <input asp-for="Result.Text">
+                <span asp-validation-for="Result.Text"></span>
+            </div>       
+            <div class="div-box">
+                <label asp-for="Result.TypeId"></label>
+                <input asp-for="Result.TypeId">
+                <span asp-validation-for="Result.TypeId"></span>
+            </div> 
+            <input type="submit" value="Save" />
+        </form>
+    </div>
+</div>

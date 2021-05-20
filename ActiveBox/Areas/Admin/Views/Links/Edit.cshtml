@@ -1,0 +1,29 @@
+﻿@model ActiveBox.Domain.Entities.Link
+
+<div>
+    <div>
+        <form asp-area="Admin" asp-controller="Links" asp-action="Edit" method="post">
+            <input type="hidden" asp-for="Links" >
+            <input type="hidden" asp-for="Name" >
+            <input type="hidden" asp-for="EntityBaseId" >
+            
+            <div asp-validation-summary="All"></div>
+            <div class="div-box">
+                <label asp-for="Links"></label>
+                <input asp-for="Links">
+                <span asp-validation-for="Links"></span>
+            </div>
+            <div class="div-box">
+                <label asp-for="Name"></label>
+                <input asp-for="Name">
+                <span asp-validation-for="Name"></span>
+            </div>       
+            <div class="div-box">
+                <label asp-for="EntityBaseId"></label>
+                <input asp-for="EntityBaseId">
+                <span asp-validation-for="EntityBaseId"></span>
+            </div> 
+            <input type="submit" value="Save" />
+        </form>
+    </div>
+</div>
